@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg , #153677 , #4e085f);
+    padding: 10px;
+
+    
+}
+.todo-app{
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 40px 70px;
+    border-radius: 10%;
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 12px;
+
+}
+button{
+    border: none;
+    outline: none;
+    background: #ff5945;
+    padding: 13px 25px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    
+
+}
+ul li{
+    list-style: none;
+    font-size: 12px;
+    padding: 12px 8px 12px 8px;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 20px;
+    flex-direction: column;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: -19px;
+
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(/checked.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 9px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 20px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #edeef0;
+    border-radius: 50%;
+
+}
+
+@media (min-width: 1024px) {
+    body {
+      font-size: 2rem;
+    }
+    .todo-app{
+        width: 100%;
+        max-width: 540px;
+       
+    }
+    input{
+        font-size: 0.9rem;
+    }
+    ul li{
+        font-size: 0.9rem;
+    }
+  }
